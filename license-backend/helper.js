@@ -4,11 +4,12 @@ const mongoose = require('./db');
 async function getData() {
     try {
         const data = await userModel.find({});
-        console.log(data);
+        return data;
     } catch (error) {
         console.error(error);
     } finally {
-        mongoose.connection.close();
+        // mongoose.connection.close();
+        console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ CLOSED CONNECTION");
     }
 }
 

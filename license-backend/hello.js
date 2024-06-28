@@ -20,7 +20,7 @@ app.get('/country/list',(req,res)=>{
 app.get('/user', async (req,res) =>{
   console.log("getting user data from mongo db");
   const data = await getData();
-  res.send(data);
+  res.send("Hello"+ JSON.stringify(data));
 });
 
 
