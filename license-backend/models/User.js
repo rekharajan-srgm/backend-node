@@ -10,5 +10,5 @@ const userSchema = new mongoose.Schema({
 
 //create model
 // while creating model , map which table points to this schema.
-const UserModel = mongoose.model('users', userSchema); 
+const UserModel = mongoose.model('users', userSchema);
 module.exports = UserModel;
