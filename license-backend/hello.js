@@ -1,6 +1,6 @@
 // Import required modules
 const express = require('express');
-const {getData} = require('./helper');
+const { getData } = require('./helper');
 
 // Create an Express application
 const app = express();
@@ -12,15 +12,15 @@ app.get('/hello', (request, response) => {
 });
 
 
-app.get('/country/list',(req,res)=>{
-    res.send('{"countries":["UnitedStates","Europe","India","Srilanka","Australia","Africa","Russia","Japan"]}');
+app.get('/country/list', (req, res) => {
+  res.send('{"countries":["UnitedStates","Europe","India","Srilanka","Australia","Africa","Russia","Japan"]}');
 
 });
 
-app.get('/user', async (req,res) =>{
+app.get('/user', async (req, res) => {
   console.log("getting user data from mongo db");
   const data = await getData();
-  res.send("Hello"+ JSON.stringify(data));
+  res.send("Hello" + JSON.stringify(data));
 });
 
 
