@@ -8,8 +8,7 @@ async function getData() {
     } catch (error) {
         console.error(error);
     } finally {
-        // mongoose.connection.close();
-        console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ CLOSED CONNECTION");
+        mongoose.connection.close();
     }
 }
 
